@@ -30,3 +30,8 @@
 .signup-form {
   margin-top: 3rem;
 }
+
+.highlight-grey {
+  color: var(--grey-color);
+  font-size: 0.8rem;
+}
