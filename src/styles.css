@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --grey-color: rgba(117, 117, 117, 1);
+  --orange-primary: rgba(255, 189, 0, 1);
+}
+
+a {
+  color: var(--orange-primary);
+}
+
+input::placeholder {
+  color: var(--grey-color);
+}

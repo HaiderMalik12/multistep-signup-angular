@@ -4,3 +4,23 @@
   height: 757px;
   object-fit: cover;
 }
+
+.heading {
+  margin-top: 6rem;
+  font-size: 1.7rem;
+  color: rgba(17, 17, 17, 1);
+  line-height: 39px;
+}
+
+.sub-heading {
+  color: var(--grey-color);
+  font-size: 1rem;
+  line-height: 21px;
+  text-align: center;
+}
+
+.text-field {
+  width: 500px;
+  align-items: center;
+  margin-left: 15rem;
+}
