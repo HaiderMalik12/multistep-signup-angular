@@ -35,3 +35,16 @@
   color: var(--grey-color);
   font-size: 0.8rem;
 }
+
+.social-icon {
+  margin-right: 0.3rem;
+}
+
+.apple-icon {
+  margin-bottom: 0.3rem;
+}
+
+.btn-outline-secondary:hover {
+  color: var(--grey-color);
+  background-color: white;
+}
