@@ -1,7 +1,7 @@
 .taker {
   background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
-  width: 467px;
-  height: 757px;
+  width: 465px;
+  height: 733px;
   object-fit: cover;
 }
 
@@ -19,8 +19,14 @@
   text-align: center;
 }
 
-.text-field {
-  width: 500px;
+.text-field,
+.next-btn {
+  width: 430px;
   align-items: center;
   margin-left: 15rem;
+  margin-top: 0.5rem;
+}
+
+.signup-form {
+  margin-top: 3rem;
 }

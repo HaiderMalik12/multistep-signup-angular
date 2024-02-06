@@ -2,6 +2,8 @@
 :root {
   --grey-color: rgba(117, 117, 117, 1);
   --orange-primary: rgba(255, 189, 0, 1);
+  --bs-btn-border-color: var(--orange-primary);
+  --bs-btn-border-color: var(--orange-primary);
 }
 
 a {
@@ -10,4 +12,13 @@ a {
 
 input::placeholder {
   color: var(--grey-color);
+}
+
+.btn {
+  background-color: var(--orange-primary);
+  border-radius: 3px solid var(--orange-primary);
+}
+
+.btn:hover {
+  background-color: var(--orange-primary);
 }
