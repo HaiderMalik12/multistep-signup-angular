@@ -18,6 +18,7 @@
   }
 }
 
-.mt-10 {
-  margin-top: 10rem;
+.btn-outline-secondary:hover {
+  color: var(--grey-color);
+  background-color: white;
 }
