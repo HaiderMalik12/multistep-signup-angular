@@ -1,18 +1,34 @@
 .taker {
   background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
-  object-fit: cover;
-  width: 580px; /* Set the initial width */
-  height: 720px; /* Set the initial height */
+  /* object-fit: cover; */
+  width: 525px;
+  height: 805px;
   margin-left: 3.5rem;
 }
 @media (width < 1282px) {
   .taker {
     width: 440px;
-    /* margin-left: 5rem; */
   }
 }
 
 @media (max-width: 1265px) {
+  .taker {
+    width: 430px;
+  }
+}
+
+@media (max-width: 1122px) {
+  .taker {
+    width: 420px;
+  }
+}
+@media (max-width: 1037px) {
+  .taker {
+    width: 410px;
+  }
+}
+
+@media (max-width: 993px) {
   .taker {
     display: none;
   }
