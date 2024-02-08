@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box; /* Apply box-sizing: border-box; to all elements */
+}
+
 .taker {
   background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
   /* object-fit: cover; */
-  width: 525px;
-  height: 805px;
-  margin-left: 3.5rem;
+  width: 526px;
+  height: 813px;
+  margin-left: 3.4rem;
 }
 @media (width < 1282px) {
   .taker {
