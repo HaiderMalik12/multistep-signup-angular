@@ -1,69 +1,23 @@
 .taker {
   background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
-  width: 480px;
-  height: 830px;
   object-fit: cover;
+  width: 580px; /* Set the initial width */
+  height: 720px; /* Set the initial height */
+  margin-left: 3.5rem;
 }
-
-.heading {
-  margin-top: 6rem;
-  font-size: 1.7rem;
-  color: rgba(17, 17, 17, 1);
-  line-height: 39px;
-}
-
-.sub-heading {
-  color: var(--grey-color);
-  font-size: 1rem;
-  line-height: 21px;
-  /* text-align: center; */
-}
-
-.text-field,
-.next-btn {
-  width: 430px;
-  align-items: center;
-  margin-left: 15rem;
-  margin-top: 0.5rem;
-}
-
-.signup-form {
-  margin-top: 3rem;
-}
-
-.highlight-grey {
-  color: var(--grey-color);
-  font-size: 0.8rem;
-}
-
-.social-icon {
-  margin-right: 0.3rem;
-}
-
-.apple-icon {
-  margin-bottom: 0.3rem;
-}
-
-.btn-outline-secondary:hover {
-  color: var(--grey-color);
-  background-color: white;
-}
-
-@media only screen and (max-width: 30rem) {
-  img.taker {
-    width: 100%;
-  }
-}
-
-@media (width < 1150px) {
+@media (width < 1282px) {
   .taker {
-    width: 400px;
-    margin-left: 5rem;
+    width: 440px;
+    /* margin-left: 5rem; */
   }
 }
 
-@media (max-width: 1146px) {
+@media (max-width: 1265px) {
   .taker {
     display: none;
   }
+}
+
+.mt-10 {
+  margin-top: 10rem;
 }
