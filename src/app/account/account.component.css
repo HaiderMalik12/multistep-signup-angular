@@ -2,16 +2,27 @@
   box-sizing: border-box; /* Apply box-sizing: border-box; to all elements */
 }
 
-.taker-container {
-  background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
-}
-
 .taker {
-  /* object-fit: cover; */
+  background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
   width: 543px;
   height: 755px;
   margin-left: 3.5rem;
 }
+
+@media (max-width < 1440px) {
+  .taker {
+    width: 440px;
+    height: 800px;
+  }
+}
+
+@media (max-width > 1440px) {
+  .taker {
+    width: 440px;
+    height: 900px;
+  }
+}
+
 @media (width < 1282px) {
   .taker {
     width: 440px;
