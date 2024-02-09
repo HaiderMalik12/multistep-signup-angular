@@ -2,12 +2,15 @@
   box-sizing: border-box; /* Apply box-sizing: border-box; to all elements */
 }
 
-.taker {
+.taker-container {
   background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
+}
+
+.taker {
   /* object-fit: cover; */
-  width: 526px;
-  height: 813px;
-  margin-left: 3.4rem;
+  width: 543px;
+  height: 755px;
+  margin-left: 3.5rem;
 }
 @media (width < 1282px) {
   .taker {
@@ -41,4 +44,18 @@
 .btn-outline-secondary:hover {
   color: var(--grey-color);
   background-color: white;
+}
+
+/* Custom styles for the navbar */
+.custom-navbar {
+  background: #111111; /* Custom background color */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .navbar-nav .nav-link {
+  color: #ffffff; /* Custom text color */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #cccccc; /* Change color on hover if needed */
 }
