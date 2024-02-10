@@ -33,7 +33,7 @@ import { Component } from '@angular/core';
                     aria-expanded="false"
                   >
                     <img
-                      src="/assets/world-2.png"
+                      src="/assets/world.png"
                       class="img-fluid"
                       alt="World Logo in dropdown"
                     />
