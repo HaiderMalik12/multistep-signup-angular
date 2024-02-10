@@ -1,76 +1,208 @@
-* {
-  box-sizing: border-box; /* Apply box-sizing: border-box; to all elements */
+.create-account-inner {
+  margin-top: 60px;
 }
 
-.taker {
+.already_have_account .login_in_a {
+  color: #ffbd00;
+  text-decoration: underline;
+  font-family: Poppins-Medium;
+  font-weight: 500;
+}
+
+.already_have_account {
+  font-size: 14px;
+  padding-top: 8px;
+  line-height: 21px;
+  color: #757575;
+}
+
+.create-account-inner form {
+  max-width: 526px;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.tt-input {
+  width: 100%;
+  height: 48px;
+  padding: 13px 16px 14px 16px;
+  border: 0.5px solid #bdbdbd;
+  border-radius: 10px;
+}
+
+.form-div-password {
+  margin-top: 16px;
+}
+
+.form-div-password button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #111111;
+  justify-content: center;
+  font-size: 12px;
+  text-decoration: underline;
+  margin-right: 15px;
+  border: 0;
+  background-color: transparent;
+  top: 0;
+}
+
+.btn_next_div {
+  background-color: #ffbd00;
+  height: 48px;
+  color: #fff;
+  border: 0;
+  margin-top: 32px;
+  border-radius: 10px;
+}
+
+.or_text {
+  color: #757575;
+  padding: 32px 0 24px 0;
+}
+
+.logo-text b {
+  font-family: inherit !important;
+}
+
+.signup_google span,
+.signup_apple span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #474747;
+  margin-left: 8px;
+}
+
+.signup_google,
+.signup_apple {
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  padding: 12px 40px 12px 40px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.signup_apple {
+  margin-top: 16px;
+}
+
+.tt-input::placeholder {
+  color: #757575;
+}
+
+.lastdesc_p_signup {
+  margin-top: 32px;
+  color: #757575;
+}
+
+.lastdesc_p_signup span {
+  color: #ffbd00;
+  text-decoration: underline;
+}
+
+.upper_icon {
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.right-image-col {
   background: linear-gradient(91.26deg, #feef34 -0.9%, #ffec00 98.68%);
-  width: 100vh;
-  height: 93.5vh;
-  margin-left: 3.5rem;
+  width: 580px;
+  /* height: calc(100vh - 64px); */
 }
 
-@media (max-width < 1440px) {
-  .taker {
-    width: 440px;
-    height: 800px;
-  }
+.right-image-col img {
+  position: relative;
+  left: -38px;
 }
 
-@media (max-width > 1440px) {
-  .taker {
-    width: 440px;
-    height: 900px;
-  }
+.create_business_account_title {
+  font-size: 26px;
+  line-height: 39px;
 }
 
-@media (width < 1282px) {
-  .taker {
-    width: 440px;
-  }
+.left-create-account-col {
+  width: calc(100% - 580px);
 }
 
-@media (max-width: 1265px) {
-  .taker {
-    width: 430px;
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .right-image-col {
+    width: 350px;
   }
-}
+  .right-image-col img {
+    position: relative;
+    left: -8px;
+  }
 
-@media (max-width: 1122px) {
-  .taker {
-    width: 420px;
+  .left-create-account-col {
+    width: calc(100% - 350px);
+  }
+  .create-account-inner form {
+    max-width: 450px;
+    margin: auto;
+    padding-top: 40px;
+  }
+  .create-account-inner form {
+    max-width: 350px;
   }
 }
-@media (max-width: 1037px) {
-  .taker {
-    width: 410px;
+@media only screen and (max-width: 768px) {
+  .flex_wrap_sm {
+    flex-wrap: wrap;
   }
-}
-
-@media (max-width: 993px) {
-  .taker {
+  .left-create-account-col {
+    width: 100%;
+  }
+  .right-image-col {
     display: none;
   }
-
-  /* div.row.g-5:first-child {
-    
-  } */
+  .left-create-account-col {
+    padding: 0 15px;
+  }
+  .create_business_account_title {
+    font-size: 20px;
+    line-height: 39px;
+  }
+  .create-account-inner {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  header {
+    background-color: #111111;
+    height: 64px;
+    padding: 0 15px;
+  }
+  .logo-text {
+    font-size: 16px;
+    line-height: 0;
+    text-decoration: none;
+  }
 }
 
-.btn-outline-secondary:hover {
-  color: var(--grey-color);
-  background-color: white;
+@media only screen and (min-width: 992px) and (max-width: 1150px) {
+  .right-image-col {
+    width: 400px;
+  }
+
+  .left-create-account-col {
+    width: calc(100% - 400px);
+  }
+  .create-account-inner form {
+    max-width: 450px;
+    margin: auto;
+    padding-top: 40px;
+  }
 }
 
-/* Custom styles for the navbar */
-.custom-navbar {
-  background: #111111; /* Custom background color */
-}
+@media only screen and (min-width: 1150px) and (max-width: 1400px) {
+  .right-image-col {
+    width: 430px;
+  }
 
-.custom-navbar .navbar-brand,
-.custom-navbar .navbar-nav .nav-link {
-  color: #ffffff; /* Custom text color */
-}
-
-.custom-navbar .navbar-nav .nav-link:hover {
-  color: #cccccc; /* Change color on hover if needed */
+  .left-create-account-col {
+    width: calc(100% - 430px);
+  }
 }

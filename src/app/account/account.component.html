@@ -1,100 +1,44 @@
 <app-navbar></app-navbar>
-<div class="container-fluid px-lg-5">
-  <main>
-    <div class="row g-5">
-      <div class="col-md-7 col-lg-5 offset-lg-2 offset-md-3">
-        <div class="py-5 text-center mt-5">
-          <h2>Create a business account</h2>
-          <small class="text-muted"
-            >Already have an account? <a href="/">Login</a></small
-          >
+<div class="d-flex flex_wrap_sm">
+  <div class="left-create-account-col px-lg-3">
+    <div class="create-account-inner">
+      <h1 class="create_business_account_title bold mb-0 text-center">
+        Create a business account
+      </h1>
+      <p class="mb-0 text-center already_have_account">
+        Already have an account? <a href="" class="login_in_a">Log in</a>
+      </p>
+      <form action="">
+        <div class="form-div">
+          <input type="email" placeholder="Work email" class="tt-input" />
         </div>
-
-        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-          <div class="row g-3">
-            <div class="col-12">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="Work Email"
-                name="email"
-                formControlName="email"
-              />
-            </div>
-
-            <div class="col-12">
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="Password"
-                name="password"
-                formControlName="password"
-              />
-            </div>
-
-            <div class="col-12">
-              <button
-                class="w-100 btn btn-warning btn-lg"
-                type="submit"
-                [disabled]="!signupForm.valid"
-              >
-                Next
-              </button>
-            </div>
-
-            <div class="col-12 text-center">
-              <small class="text-muted">OR</small>
-            </div>
-
-            <div class="col-12">
-              <button
-                class="w-100 btn btn-outline-secondary btn-lg no-hover"
-                type="submit"
-              >
-                <img
-                  src="assets/google.png"
-                  alt="Google"
-                  width="20px"
-                  class="mb-1"
-                />
-                Signup with Google
-              </button>
-            </div>
-
-            <div class="col-12">
-              <button
-                class="w-100 btn btn-outline-secondary btn-lg"
-                type="submit"
-              >
-                <img
-                  src="assets/apple.svg"
-                  alt="Apple"
-                  width="18px"
-                  class="mb-2"
-                />
-                Signup with Apple
-              </button>
-            </div>
-
-            <div class="col-12 text-center">
-              <small class="text-muted">
-                By registering, you accept our
-                <a href="/terms">Terms of use</a> and
-                <a href="/privacy">Privecy Policy</a>
-              </small>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-lg-5 overflow-hidden">
-        <img
-          src="assets/order-taker.png"
-          class="taker object-fit-lg-cover object-fit-sm-contain img-fluid"
-          alt="Order Taker"
-        />
-      </div>
+        <div class="form-div form-div-password position-relative">
+          <input type="password" placeholder="Password" class="tt-input" />
+          <button>Show</button>
+        </div>
+        <button class="btn_next_div w-100">Next</button>
+        <p class="mb-0 or_text text-center">OR</p>
+        <button class="signup_google w-100">
+          <img src="assets/images/google.png" alt="" srcset="" />
+          <span>Sign up with google</span>
+        </button>
+        <button class="signup_apple w-100">
+          <img src="assets/images/apple.png" alt="" srcset="" />
+          <span>Sign up with Apple</span>
+        </button>
+      </form>
+      <p class="mb-0 text-center lastdesc_p_signup">
+        By registering, you accept our <span>Terms of use</span> and
+        <span>Privecy Policy</span>
+      </p>
     </div>
-  </main>
+  </div>
+  <div class="right-image-col">
+    <img
+      class="w-100"
+      src="assets/images/handsome-waiter-taking-orders-holding-digital-tablet-smiling-wearing-black-apron-uniform-standing-yellow-background 1.png"
+      alt=""
+      srcset=""
+    />
+  </div>
 </div>

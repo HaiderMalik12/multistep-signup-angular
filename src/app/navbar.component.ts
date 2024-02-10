@@ -5,56 +5,43 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
-          <div class="container-fluid px-5-lg">
-            <a class="navbar-brand" href="#">Hi Menus for Business</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDarkDropdown"
-              aria-controls="navbarNavDarkDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNavDarkDropdown"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <button
-                    class="btn btn-dark dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="/assets/world.png"
-                      class="img-fluid"
-                      alt="World Logo in dropdown"
-                    />
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+    <header class="d-flex justify-content-between align-items-center">
+      <div>
+        <a href="" class="logo-text text-white"> <b>HiMenus</b> for Business</a>
       </div>
-    </div>
+      <div
+        class="language-switcher d-flex align-items-center justify-content-center"
+      >
+        <img src="./assets/images/World.png" alt="" srcset="" />
+        <img
+          src="./assets/images/upper.png"
+          class="upper_icon"
+          alt=""
+          srcset=""
+        />
+      </div>
+    </header>
   `,
-  styles: ``,
+  styles: `
+  header {
+    background-color: #111111;
+    height: 64px;
+    padding: 0 61px;
+}
+
+.logo-text {
+    font-size: 21px;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.language-switcher {
+    width: 80px;
+    cursor: pointer;
+    height: 36px;
+    border-radius: 30px;
+    background-color: #343434;
+}
+  `,
 })
 export class NavbarComponent {}
