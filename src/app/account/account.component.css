@@ -50,6 +50,10 @@
   .taker {
     display: none;
   }
+
+  /* div.row.g-5:first-child {
+    
+  } */
 }
 
 .btn-outline-secondary:hover {
