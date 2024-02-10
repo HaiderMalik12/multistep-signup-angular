@@ -10,7 +10,7 @@
           >
         </div>
 
-        <form>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
           <div class="row g-3">
             <div class="col-12">
               <input
@@ -18,6 +18,8 @@
                 class="form-control"
                 id="email"
                 placeholder="Work Email"
+                name="email"
+                formControlName="email"
               />
             </div>
 
@@ -27,11 +29,17 @@
                 class="form-control"
                 id="password"
                 placeholder="Password"
+                name="password"
+                formControlName="password"
               />
             </div>
 
             <div class="col-12">
-              <button class="w-100 btn btn-warning btn-lg" type="submit">
+              <button
+                class="w-100 btn btn-warning btn-lg"
+                type="submit"
+                [disabled]="!signupForm.valid"
+              >
                 Next
               </button>
             </div>
