@@ -15,8 +15,12 @@ export class AccountComponent {
     email: ['', Validators.required],
     password: ['', Validators.required],
   });
+  show: boolean = false;
 
   onSubmit() {
     console.warn(this.signupForm.value);
+  }
+  password() {
+    this.show = !this.show;
   }
 }

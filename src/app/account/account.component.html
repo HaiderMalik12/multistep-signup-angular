@@ -20,13 +20,13 @@
         </div>
         <div class="form-div form-div-password position-relative">
           <input
-            type="password"
+            [type]="show ? 'text' : 'password'"
             placeholder="Password"
             class="tt-input"
             name="password"
             formControlName="password"
           />
-          <button>Show</button>
+          <button (click)="password()">{{ show ? "Hide" : "Show" }}</button>
         </div>
         <button
           class="btn_next_div w-100"
