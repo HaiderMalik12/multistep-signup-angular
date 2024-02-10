@@ -8,15 +8,33 @@
       <p class="mb-0 text-center already_have_account">
         Already have an account? <a href="" class="login_in_a">Log in</a>
       </p>
-      <form action="">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <div class="form-div">
-          <input type="email" placeholder="Work email" class="tt-input" />
+          <input
+            type="email"
+            placeholder="Work email"
+            class="tt-input"
+            name="email"
+            formControlName="email"
+          />
         </div>
         <div class="form-div form-div-password position-relative">
-          <input type="password" placeholder="Password" class="tt-input" />
+          <input
+            type="password"
+            placeholder="Password"
+            class="tt-input"
+            name="password"
+            formControlName="password"
+          />
           <button>Show</button>
         </div>
-        <button class="btn_next_div w-100">Next</button>
+        <button
+          class="btn_next_div w-100"
+          [disabled]="!signupForm.valid"
+          type="submit"
+        >
+          Next
+        </button>
         <p class="mb-0 or_text text-center">OR</p>
         <button class="signup_google w-100">
           <img src="assets/images/google.png" alt="" srcset="" />
