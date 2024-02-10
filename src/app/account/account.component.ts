@@ -20,7 +20,7 @@ export class AccountComponent {
   onSubmit() {
     console.warn(this.signupForm.value);
   }
-  password() {
+  passwordToggle() {
     this.show = !this.show;
   }
 }
