@@ -53,21 +53,22 @@ import { Component } from '@angular/core';
         </div>
 
         <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-      </form>
-      <div class="row gap-3 bottom-border-container">
-        <div class="col bottom-border "></div>
-        <div class="col bottom-border "></div>
-        <div class="col bottom-border "></div>
-      </div>
 
-      <div class="row mt-3 text-center">
-        <div class="col-4">
-          <a class="bottom-border-back" href="/">Back</a>
+        <div class="row gap-3 bottom-border-container">
+          <div class="col bottom-border "></div>
+          <div class="col bottom-border "></div>
+          <div class="col bottom-border "></div>
         </div>
-        <div class="col-4 offset-4">
-          <button class="btn bottom-border-btn py-1 px-4">Next</button>
+
+        <div class="row mt-3 text-center">
+          <div class="col-4">
+            <a class="bottom-border-back" href="/">Back</a>
+          </div>
+          <div class="col-4 offset-4">
+            <button class="btn bottom-border-btn py-1 px-4">Next</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   `,
   styleUrl: './about-form.component.css',
