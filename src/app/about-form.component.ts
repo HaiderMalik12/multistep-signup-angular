@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
       <div class="row">
         <h2 class="about-title text-center">Tell us about yourself</h2>
       </div>
@@ -45,15 +45,20 @@ import { Component } from '@angular/core';
               aria-label="Where did you hear about us"
             >
               <option selected>Where did you hear about us</option>
-              <option value="USA">USA</option>
-              <option value="UK">UK</option>
-              <option value="Japan">Japan</option>
+              <option value="USA">Google</option>
+              <option value="UK">Referral</option>
+              <option value="Japan">LinkedIn</option>
             </select>
           </div>
         </div>
 
         <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
       </form>
+      <div class="row gap-3 bottom-border-container">
+        <div class="col bottom-border "></div>
+        <div class="col bottom-border "></div>
+        <div class="col bottom-border "></div>
+      </div>
     </div>
   `,
   styleUrl: './about-form.component.css',
