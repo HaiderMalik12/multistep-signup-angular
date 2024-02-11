@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar.component';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -10,7 +11,8 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   styleUrl: './account.component.css',
 })
 export class AccountComponent {
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
+
   signupForm = this.formBuilder.group({
     email: ['', Validators.required],
     password: ['', Validators.required],
@@ -19,6 +21,7 @@ export class AccountComponent {
 
   onSubmit() {
     console.warn(this.signupForm.value);
+    this.router.navigate(['/about']);
   }
   passwordToggle() {
     this.show = !this.show;
