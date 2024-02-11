@@ -27,6 +27,31 @@ import { Component } from '@angular/core';
           </div>
         </div>
 
+        <div class="row align-items-center justify-content-center ms-3 me-1">
+          <div class="col-md-8 col-lg-5 col-sm-12 mb-3">
+            <select class="form-select" aria-label="Country of Registration">
+              <option selected>Country of registration</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Japan">Japan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center ms-3 me-1">
+          <div class="col-md-8 col-lg-5 col-sm-12 mb-3">
+            <select
+              class="form-select"
+              aria-label="Where did you hear about us"
+            >
+              <option selected>Where did you hear about us</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Japan">Japan</option>
+            </select>
+          </div>
+        </div>
+
         <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
       </form>
     </div>
