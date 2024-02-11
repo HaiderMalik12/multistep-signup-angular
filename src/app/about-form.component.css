@@ -25,5 +25,8 @@ select {
   background-color: #eeeeee;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 499px) {
+  .bottom-border-container {
+    margin-top: 6rem;
+  }
 }
