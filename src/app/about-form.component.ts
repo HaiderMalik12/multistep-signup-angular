@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-form',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   template: `
     <div class="container-fluid mt-5">
       <div class="row">
@@ -14,7 +16,7 @@ import { Component } from '@angular/core';
           Welcome! Let's get to know each other a bit better.
         </p>
       </div>
-      <form>
+      <form [formGroup]="aboutForm" (ngSubmit)="onSubmit()">
         <div class="row align-items-center justify-content-center ms-3 me-1">
           <div class="col-md-8 col-lg-5 col-sm-12 mb-3">
             <input
@@ -23,13 +25,18 @@ import { Component } from '@angular/core';
               id="fullname"
               aria-describedby="fullname"
               placeholder="Full name"
+              formControlName="fullname"
             />
           </div>
         </div>
 
         <div class="row align-items-center justify-content-center ms-3 me-1">
           <div class="col-md-8 col-lg-5 col-sm-12 mb-3">
-            <select class="form-select" aria-label="Country of Registration">
+            <select
+              class="form-select"
+              aria-label="Country of Registration"
+              formControlName="country"
+            >
               <option selected>Country of registration</option>
               <option value="USA">USA</option>
               <option value="UK">UK</option>
@@ -43,6 +50,7 @@ import { Component } from '@angular/core';
             <select
               class="form-select"
               aria-label="Where did you hear about us"
+              formControlName="refer"
             >
               <option selected>Where did you hear about us</option>
               <option value="USA">Google</option>
@@ -65,7 +73,13 @@ import { Component } from '@angular/core';
             <a class="bottom-border-back" href="/">Back</a>
           </div>
           <div class="col-4 offset-4">
-            <button class="btn bottom-border-btn py-1 px-4">Next</button>
+            <button
+              class="btn bottom-border-btn py-1 px-4"
+              type="submit"
+              [disabled]="!aboutForm.valid"
+            >
+              Next
+            </button>
           </div>
         </div>
       </form>
@@ -73,4 +87,17 @@ import { Component } from '@angular/core';
   `,
   styleUrl: './about-form.component.css',
 })
-export class AboutFormComponent {}
+export class AboutFormComponent {
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
+
+  aboutForm = this.formBuilder.group({
+    fullname: ['', Validators.required],
+    country: ['', Validators.required],
+    refer: ['', Validators.required],
+  });
+
+  onSubmit() {
+    console.warn(this.aboutForm.value);
+    this.router.navigate(['/phone']);
+  }
+}
