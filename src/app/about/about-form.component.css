@@ -89,3 +89,12 @@ select {
   margin: 0 auto;
   justify-content: space-between;
 }
+
+.progress_wrapper .back_link {
+  color: #757575;
+}
+
+input::placeholder,
+select {
+  color: var(--color-grey);
+}
