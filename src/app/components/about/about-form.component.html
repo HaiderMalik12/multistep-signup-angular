@@ -26,10 +26,7 @@
         aria-label="Default select example"
         formControlName="refer"
       >
-        <option selected>Where did you here about us</option>
-        <option value="google">Google</option>
-        <option value="facebook">Facebook</option>
-        <option value="linkedin">LinkedIn</option>
+        <option *ngFor="let r of referrals" [ngValue]="r">{{ r }}</option>
       </select>
     </div>
   </form>

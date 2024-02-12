@@ -12,7 +12,10 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class AboutFormComponent {
   countries: string[] = ['USA', 'UK', 'Canada', 'Dubai'];
-  default: string = 'Dubai';
+  defaultCountry: string = 'Dubai';
+
+  referrals: string[] = ['Google', 'LinkedIn', 'Facebook', 'Refer', 'Friend'];
+  defaultReferral: string = 'Google';
 
   aboutForm = this.formBuilder.group({
     fullname: ['', Validators.required],
@@ -21,7 +24,10 @@ export class AboutFormComponent {
   });
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
-    this.aboutForm.controls['country'].setValue(this.default, {
+    this.aboutForm.controls['country'].setValue(this.defaultCountry, {
+      onlySelf: true,
+    });
+    this.aboutForm.controls['refer'].setValue(this.defaultReferral, {
       onlySelf: true,
     });
   }
