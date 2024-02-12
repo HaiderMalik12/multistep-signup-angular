@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { NgxMaskDirective } from 'ngx-mask';
 
 @Component({
   selector: 'app-about-form',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [NgxMaskDirective, RouterLink, ReactiveFormsModule],
   templateUrl: './about-form.component.html',
   styleUrl: './about-form.component.css',
 })
