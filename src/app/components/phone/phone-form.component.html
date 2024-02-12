@@ -13,10 +13,7 @@
         style="max-width: 130px"
         formControlName="countryCode"
       >
-        <option selected>+91</option>
-        <option value="1">+92</option>
-        <option value="2">+1</option>
-        <option value="3">+37</option>
+        <option *ngFor="let c of countryCodes" [ngValue]="c">{{ c }}</option>
       </select>
       <input
         type="text"
@@ -27,13 +24,6 @@
         appPhoneMask
       />
     </div>
-
-    <!--  AcceptNumbersDirective -->
-    <!-- (keypress)="numberOnly($event)" -->
-    <!-- <div *ngIf="m.phone.touched && m.phone.invalid" class="alert alert-danger">
-      <div *ngIf="m.phone.errors">Please enter mobile number</div>
-      <div *ngIf="m.phone.errors">Mobile number is not 10 digit</div>
-    </div> -->
   </form>
 </div>
 

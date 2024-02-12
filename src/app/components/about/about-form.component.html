@@ -17,10 +17,7 @@
         aria-label="Default select example"
         formControlName="country"
       >
-        <option selected>Country of registration</option>
-        <option value="usa">USA</option>
-        <option value="canada">Canada</option>
-        <option value="uk">UK</option>
+        <option *ngFor="let c of countries" [ngValue]="c">{{ c }}</option>
       </select>
     </div>
     <div class="mb-3">
