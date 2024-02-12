@@ -1,0 +1,52 @@
+.wrapper {
+    padding: 30px 20px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 526px;
+    width: 100%;
+}
+.wrapper h3 {
+    font-size: 26px;
+    color: #111111;
+    font-weight: bold;
+}
+.wrapper p {
+    font-size: 14px;
+    color: #757575;
+    /* margin-top: 10px; */
+}
+.wrapper form {
+    padding-top: 30px;
+    font-size: 14px;
+}
+
+.wrapper select option {
+    color: #757575;
+}
+
+.progress_wrapper {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+.progress_wrapper .steps{
+    display: flex;
+    padding: 0;
+    gap: 10px;
+    list-style-type: none;
+}
+.progress_wrapper .steps li {
+    width: 100%;
+    height: 8px;
+    background-color: #EEEEEE;
+}
+.progress_wrapper .steps li.completed {
+    background-color: #111111 !important;
+}
+.progress_wrapper .action_buttons {
+    display: flex;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    justify-content: space-between;
+}

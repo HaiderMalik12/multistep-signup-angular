@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar.component';
-import { AboutFormComponent } from './about-form.component';
-import { PhoneFormComponent } from './phone-form.component';
+import { AboutFormComponent } from './about/about-form.component';
+import { PhoneFormComponent } from './phone/phone-form.component';
 
 @Component({
   selector: 'app-root',

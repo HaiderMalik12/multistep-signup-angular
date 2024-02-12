@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { AboutFormComponent } from './about-form.component';
+import { AboutFormComponent } from './about/about-form.component';
 import { AccountComponent } from './account/account.component';
-import { PhoneFormComponent } from './phone-form.component';
-import { CodeFormComponent } from './code-form.component';
-import { BDetailsFormComponent } from './b-details-form.component';
-import { PricingPlanComponent } from './pricing-plan.component';
+import { PhoneFormComponent } from './phone/phone-form.component';
+import { CodeFormComponent } from './code/code-form.component';
+import { BDetailsFormComponent } from './b-details/b-details-form.component';
+import { PricingPlanComponent } from './pricing/pricing-plan.component';
 
 export const routes: Routes = [
   { path: 'home', component: AccountComponent },

@@ -4,13 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-phone-form',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      phone-form works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './phone-form.component.html',
+  styleUrl: './phone-form.component.css',
 })
-export class PhoneFormComponent {
-
-}
+export class PhoneFormComponent {}

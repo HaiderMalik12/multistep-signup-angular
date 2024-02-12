@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-code-form',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      code-form works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './code-form.component.html',
+  styleUrls: ['./code-form.component.css']
 })
 export class CodeFormComponent {
 

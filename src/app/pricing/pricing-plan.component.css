@@ -1,0 +1,72 @@
+.wrapper {
+  padding: 30px 20px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 526px;
+  width: 100%;
+}
+.wrapper h3 {
+  font-size: 26px;
+  color: #111111;
+  font-weight: bold;
+}
+.wrapper p {
+  font-size: 14px;
+  color: #757575;
+  /* margin-top: 10px; */
+}
+.wrapper form {
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+.wrapper select option {
+  color: #757575;
+}
+
+.single_price_plan {
+  margin-bottom: 30px;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.single_price_plan .badge {
+  background-color: #111111;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 20px;
+}
+.single_price_plan .pricing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.single_price_plan .pricing h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.single_price_plan .pricing span {
+  font-size: 16px;
+  color: #757575;
+}
+.single_price_plan ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.single_price_plan ul li {
+  padding: 8px 0;
+  color: #757575;
+}
+.single_price_plan ul li p {
+  margin: 0;
+}

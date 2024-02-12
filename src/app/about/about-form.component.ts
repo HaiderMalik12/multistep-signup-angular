@@ -6,8 +6,27 @@ import { Router } from '@angular/router';
   selector: 'app-about-form',
   standalone: true,
   imports: [ReactiveFormsModule],
-  template: `
-    <div class="container-fluid mt-5">
+  templateUrl: './about-form.component.html',
+  styleUrl: './about-form.component.css',
+})
+export class AboutFormComponent {
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
+
+  aboutForm = this.formBuilder.group({
+    fullname: ['', Validators.required],
+    country: ['', Validators.required],
+    refer: ['', Validators.required],
+  });
+
+  onSubmit() {
+    console.warn(this.aboutForm.value);
+    this.router.navigate(['/phone']);
+  }
+}
+
+/**
+ * 
+ *  <div class="container-fluid mt-5">
       <div class="row">
         <h2 class="about-title text-center">Tell us about yourself</h2>
       </div>
@@ -60,21 +79,22 @@ import { Router } from '@angular/router';
           </div>
         </div>
 
-        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-
         <div class="row gap-3 bottom-border-container">
           <div class="col bottom-border "></div>
           <div class="col bottom-border "></div>
           <div class="col bottom-border "></div>
         </div>
 
-        <div class="row mt-3 text-center">
-          <div class="col-4">
-            <a class="bottom-border-back" href="/">Back</a>
-          </div>
-          <div class="col-4 offset-4">
+        <div class="progress_wrapper">
+          <ul class="steps">
+            <li class="completed"></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="action_buttons">
+            <a href="">Back</a>
             <button
-              class="btn bottom-border-btn py-1 px-4"
+              class="btn btn-dark"
               type="submit"
               [disabled]="!aboutForm.valid"
             >
@@ -84,20 +104,4 @@ import { Router } from '@angular/router';
         </div>
       </form>
     </div>
-  `,
-  styleUrl: './about-form.component.css',
-})
-export class AboutFormComponent {
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
-
-  aboutForm = this.formBuilder.group({
-    fullname: ['', Validators.required],
-    country: ['', Validators.required],
-    refer: ['', Validators.required],
-  });
-
-  onSubmit() {
-    console.warn(this.aboutForm.value);
-    this.router.navigate(['/phone']);
-  }
-}
+ */
