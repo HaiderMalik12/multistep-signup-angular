@@ -24,3 +24,12 @@ body {
 .bold {
   font-family: Poppins-Bold;
 }
+
+.progress_wrapper .back_link {
+  color: #757575;
+}
+
+input::placeholder,
+select::placeholder {
+  color: var(--color-grey);
+}
