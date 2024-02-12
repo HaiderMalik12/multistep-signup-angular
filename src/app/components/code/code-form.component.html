@@ -1,26 +1,38 @@
 <div class="wrapper">
-    <h3>Enter the 6-digit code</h3>
-    <p>We sent it to +971502304321. <a href="#" style="color: #FFBD00;">Change number</a></p>
-      <form class="form-group">
-          <div class="mb-3">
-              <input type="text" class="form-control" id="fullName" placeholder="Your 6-digit code">
-          </div>
-      </form>
+  <h3>Enter the 6-digit code</h3>
+  <p>
+    We sent it to +971502304321.
+    <a href="#" style="color: #ffbd00">Change number</a>
+  </p>
+  <form class="form-group" [formGroup]="codeForm">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="fullName"
+        placeholder="Your 6-digit code"
+        formControlName="code"
+        appSixDigitOnly
+      />
+    </div>
+  </form>
+</div>
+
+<div class="progress_wrapper">
+  <ul class="steps">
+    <li class="completed"></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="action_buttons">
+    <a href="">Back</a>
+    <button
+      class="btn btn-dark px-4 py-1"
+      type="button"
+      (click)="onSubmit()"
+      [disabled]="!codeForm.valid"
+    >
+      Next
+    </button>
   </div>
-  
-  <div class="progress_wrapper">
-      <ul class="steps">
-          <li class="completed"></li>
-          <li></li>
-          <li></li>
-      </ul>
-      <div class="action_buttons">
-          <a href="">Back</a>
-          <a class="btn btn-dark" href="">Next</a>
-      </div>
-  </div>
-  
-  
-  
-  
-  
+</div>
