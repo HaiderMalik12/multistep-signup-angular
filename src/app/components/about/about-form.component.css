@@ -47,3 +47,9 @@
   margin: 0 auto;
   justify-content: space-between;
 }
+
+@media (max-width: 600px) {
+  .progress_wrapper .action_buttons {
+    width: 100%;
+  }
+}
