@@ -1,24 +1,23 @@
 <div class="wrapper">
   <h3>Business Details</h3>
   <p>Let's bring your business into the spotlight!</p>
-  <form class="form-group">
+  <form class="form-group" [formGroup]="detailsForm">
     <div class="mb-3">
       <input
         type="text"
         class="form-control"
         id="fullName"
         placeholder="Business name"
+        formControlName="businessName"
       />
     </div>
     <div class="mb-3">
       <select
         class="form-select form-control"
         aria-label="Default select example"
+        formControlName="city"
       >
-        <option selected>City</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option *ngFor="let c of cities" [ngValue]="c">{{ c }}</option>
       </select>
     </div>
     <div class="mb-3">
@@ -27,6 +26,7 @@
         class="form-control"
         id="fullName"
         placeholder="Address deatls"
+        formControlName="address"
       />
     </div>
   </form>
@@ -39,7 +39,14 @@
     <li></li>
   </ul>
   <div class="action_buttons">
-    <a routerLink="/code" class="back_link">Back</a>
-    <a class="btn btn-dark" type="action">Next</a>
+    <a routerLink="/pricing" class="back_link ms-3">Back</a>
+    <button
+      class="btn btn-dark"
+      type="button"
+      [disabled]="!detailsForm.valid"
+      (click)="onSubmit()"
+    >
+      Next
+    </button>
   </div>
 </div>

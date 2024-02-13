@@ -19,7 +19,7 @@ export class CodeFormComponent {
   onSubmit() {
     console.warn(this.codeForm.value);
     if (this.codeForm.value.code?.length == 6) {
-      this.router.navigate(['/pricing']);
+      this.router.navigate(['/detail']);
     } else {
       alert('You have to provide your 6 digit code');
       return;
